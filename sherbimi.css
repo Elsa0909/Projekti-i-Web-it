@@ -1,0 +1,270 @@
+/* Resetimi i stileve bazë për të fshirë padding, margin dhe përdorur modelin e kutisë me kornizë për të ndërtuar objekte */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Stilizimi i elementit 'html' */
+html {
+  font-size: 15px;
+  font-family: Arial;
+  scroll-behavior: smooth;
+}
+
+/* Fshirja e dekorimit të lidhjeve */
+a {
+  text-decoration: none;
+}
+
+/* Stilizimi i seksionit 'card-body' për kartat */
+.card-body {
+  float: left;
+  width: 28%;
+  height: 450px;
+  margin-top: 90px;
+  margin-left: 50px;
+  border: 5px solid #485563;
+  border-radius: 1em;
+}
+
+/* Stilizimi i imazhit të kartës */
+.card-img {
+  float: left;
+  width: 100%;
+  height: 200px;
+  border-bottom: 2px solid black;
+  background: rgb(181, 173, 199);
+  border-radius: 1em;
+}
+
+/* Stilizimi i pjesës së sipërme të imazhit të kartës */
+.img-top {
+  float: left;
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+/* Stilizimi i titullit të kartës */
+.card-title {
+  padding: 10px;
+  padding-bottom: 1px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Stilizimi i përshkrimit të kartës */
+.card-description {
+  padding: 10px;
+  font-size: 16px;
+  height: 150px;
+  overflow: auto;
+}
+
+/* Stilizimi i tekstit të përshkrimit të kartës */
+.card-desc-txt {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Stilizimi i butonit për më shumë informacion në kartë */
+.card-more-info {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #485563;
+  color: white;
+  border: 2px solid;
+  border-radius: 0.5em;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  margin: 15px auto;
+  gap: 5px;
+}
+
+/* Efekti i hover-it për lidhjet */
+.link-design:hover {
+  text-decoration: none;
+  color: darkblue;
+}
+
+/* Efekti i hover-it për lidhjen e formës së dizajnit */
+.design-form-link:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* Stilizimi i lidhjes për formën */
+.link-form {
+  align-items: center;
+  margin: 10;
+  padding: 10px 20px;
+  float: center;
+}
+
+/* Stilizimi i div-it kryesor */
+.divKryesor {
+  margin-bottom: 10px;
+}
+
+/* Stilizimi i seksionit 'permbajtja' */
+.permbajtja {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stilizimi i titullit të seksionit */
+.section-titulli {
+  font-size: 70px;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Stilizimi i titullit të seksionit 'span' */
+.section-titulli span {
+  color: white;
+}
+
+/* Stilizimi i titullit të logot */
+.logo h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Stilizimi i span-it të titullit të logot */
+.logo h1 span {
+  color: crimson;
+}
+
+/* Stilizimi i seksionit 'koka' */
+#koka {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  background-color: #485563;
+}
+
+/* Stilizimi i seksionit 'koka' dhe tranzicioni i ngjyrës në hover */
+#koka .koka {
+  min-height: 10vh;
+  background-color: rgba(31, 30, 30, 0, 25);
+  transition: 0.3s ease background-color;
+}
+
+/* Stilizimi i navigimit në seksionin 'koka' */
+#koka .navigimi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding: 0 15px;
+}
+
+/* Stilizimi i listës së navigimit në seksionin 'koka' */
+#koka .nav-list ul {
+  list-style-type: none;
+  position: absolute;
+  background-color: rgb(31, 30, 30);
+  width: 100vw;
+  height: 100vh;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s ease left;
+}
+
+/* Stilizimi i lidhjes aktive në listën e navigimit */
+#koka .nav-list ul li:active a {
+  color: crimson;
+}
+
+/* Stilizimi i listës së navigimit kur është aktive */
+#koka .nav-list ul.active {
+  color: red;
+  left: 0%;
+}
+
+/* Stilizimi i lidhjes aktive në listën e navigimit */
+#koka .nav-list ul .active a {
+  color: crimson;
+}
+
+/* Stilizimi i lidhjeve në listën e navigimit */
+#koka .nav-list ul a {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+}
+
+/* Efekti i hover-it për lidhjen e listës së navigimit */
+#koka .nav-list ul li:hover a::after {
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: inherit;
+}
+
+/* Efekti i hover-it për lidhjen e listës së navigimit */
+#koka .nav-list ul li:hover a {
+  color: crimson;
+}
+
+/* Media query për ekrane me një gjatësi minimale prej 1200 pikselash */
+@media only screen and (min-width: 1200px) {
+  /* Fshehja e ikonës së hamburger-it për ekrane më të mëdha */
+  #koka .hamburger {
+      display: none;
+  }
+
+  /* Stilizimi i listës së navigimit përscreen më të mëdha */
+  #koka .nav-list ul {
+      position: inherit;
+      display: block;
+      height: auto;
+      width: fit-content;
+      background-color: transparent;
+  }
+
+  /* Stilizimi i elementeve të listës brenda listës së navigimit */
+  #koka .nav-list ul li {
+      display: inline-block;
+  }
+
+  /* Stilizimi i lidhjeve brenda listës së navigimit */
+  #koka .nav-list ul li a {
+      font-size: 21px;
+  }
+
+  /* Fshehja e pseudo-elementeve pas lidhjeve brenda listës së navigimit */
+  #koka .nav-list ul li a:after {
+      display: none;
+  }
+
+  /* Stilizimi i seksionit 'sherbimet' për screen më të mëdha */
+  #sherbimet .sherbimet-lista .sherbimi-caktuar {
+      flex-basis: 25%;
+      margin: 1.5%;
+  }
+}
