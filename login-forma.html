@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta-etiketat për kodin e karakterit dhe shkallën e pamjes -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulli i faqes -->
+    <title>Kyçu</title>
+    <!-- Lidhja me stilin kryesor dhe stilin e formës së kyçjes -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-forma.css"> 
+    <!-- Stilizimi i drejtpërdrejt në këtë faqe -->
+    <style>
+        /* Stilizimi i seksionit të kyçjes */
+        #loginMain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 70.71px;
+        }
+
+        /* Stilizimi i titullit të kyçjes */
+        #loginMain h1 {
+            width: fit-content;
+            display: flex;
+            margin-top: 1rem;
+            padding-bottom: 0.25rem;
+            color: white;
+            font-size: 2rem;
+            border-bottom: 5px solid white;
+        }
+
+        /* Stilizimi i nëntitullit të kyçjes */
+        #loginMain h3 {
+            color: white;
+        }
+
+        /* Stilizimi i formës së kyçjes */
+        .login-form {
+            display: flex;
+            margin: auto;
+            min-height: 350px;
+            margin: 3rem 0;
+            padding: 0 3rem;
+            padding-bottom: 1rem;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;            
+            background-color: #485563;
+            border-radius: 1.5rem;
+        }
+
+        /* Stilizimi i formës së kyçjes */
+        #loginForm {
+            display: flex;
+            flex-direction: column; /* kolone */ 
+            color: white;
+            gap: 1rem;
+        }
+
+        /* Stilizimi i etiketave të formës */
+        #loginForm label {
+            font-size: 1.3rem;
+        }
+
+        /* Stilizimi i hyrjeve të formës */
+        #loginForm input {
+            border: 1px solid;
+            padding: 10px 50px;
+            margin: 10px;
+        }
+
+        /* Stilizimi i butonit të kyçjes */
+        #loginForm button[type="submit"] {
+            width: fit-content;
+            margin: auto;
+            border: 1px solid black;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Seksioni i kokesë -->
+    <section id="koka">
+        <div class="koka permbajtja">
+            <div class="navigimi">
+                <div class="logo">
+                    <!-- Lidhja e logo-s -->
+                    <a href="#logo">
+                        <h1><span>Coding</span>Academy</h1>
+                    </a>
+                </div>
+                <!-- Lista e navigimit -->
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <!-- Lidhja dhe opsionet e navigimit -->
+                        <li><a href="index.html" >Ballina</a></li>
+                        <li><a href="sherbimi.html">Sherbimet</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>
+                        <li><a href="login-forma.html">Kyçu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seksioni i formës së kyçjes -->
+    <section id="loginMain">
+        <div class="login-form">
+            <!-- Titulli i formës së kyçjes -->
+            <h1>Kyçu</h1> 
+
+            <!-- Forma për kyçje -->
+            <form id="loginForm" action="">
+                <!-- Etiketat dhe hyrjet për email dhe fjalëkalim -->
+                <label for="loginEmail">Email:</label>
+                <input type="email" name="Email" id="loginEmail">
+                <label for="loginPassword">Password:</label>
+                <input type="password" name="Password" id="loginPassword">
+
+                <!-- Butoni për kyçje me thirrjen e funksionit validateForm() -->
+                <button type="submit" onclick="validateForm()">Kyçu</button>
+            </form>
+        </div>
+    </section>
+    <!-- Seksioni i fundit të faqes -->
+    <section id="fundi">
+        <div class="fundi permbajtja">
+            <div class="logo">
+                <!-- Logoja e Coding Academy -->
+                <h1><span>Coding</span> Academy</h1>
+            </div>
+            <!-- Një nëntitull dhe rrjetet sociale -->
+            <h2>Trajnime intenzive...</h2>
+            <div class="rrjetet-sociale">
+                <!-- Lidhjet për rrjetet sociale me ikona -->
+                <div class="rrjeti">
+                    <a href="https://www.facebook.com/" ><img src="facebook.png"></a>
+                </div>
+                <div class="rrjeti">
+                    <a href="https://www.linkedin.com/"><img src="Ln.png"></a>
+                </div>
+                <div class="rrjeti">
+                    <a href="https://twitter.com/"><img src="Twitter.png"></a>
+                </div>
+                <div class="rrjeti">
+                    <a href="https://www.instagram.com/"><img src="igg.png"></a>
+                </div>
+            </div>
+            <!-- Te dhenat e fundit të faqes -->
+            <p>Të gjitha të drejtat e rezervuara. Mundësoi: Rinesa Mala dhe Elsa Ahmeti</p>
+        </div>
+    </section>
+    <!-- Lidhja me skriptin për validim -->
+    <script src="login-forma.js"></script>
+</body>
+</html>
