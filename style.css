@@ -1,0 +1,597 @@
+/* Resetimi i stilimit bazë për të eliminuar kufizimet dhe margins nga të gjitha elementët */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Stili bazë për faqen HTML */
+html {
+    font-size: 15px;
+    font-family: Arial;
+    scroll-behavior: smooth;
+}
+
+/* Përmirësim vizual për lidhjet/link-ët */
+a {
+    text-decoration: none;
+}
+
+/* Stili për seksionin kryesor 'permbajtja' */
+.permbajtja {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stili për imazhet për tu siguruar që mbulojnë plotësisht */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Stili për tekstin paragraf */
+p {
+    color: black;
+    font-size: 16px;
+    margin-top: 5px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+/* Stili për titullin e seksionit */
+.section-titulli {
+    font-size: 16px;
+    font-weight: 300; 
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Stili për pjesën e kuqe të tekstit në titullin e seksionit */
+.section-titulli span {
+    color: white;
+}
+
+/* Stili për butonin */
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+}
+
+/* Efekti i hover për butonin */
+.btn:hover {
+    color: white;
+    background-color: crimson;
+}
+
+/* Stili për logon në krye të faqes */
+.logo h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Stili për pjesën e kuqe të tekstit në logon */
+.logo h1 span {
+    color: crimson;
+}
+
+/* Stili për navigimin e faqes */
+#koka {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #485563;
+}
+
+/* Stili për prapavijën e navigimit */
+#koka .koka {
+    min-height: 10vh;
+    background-color: rgba(31, 30, 30, 0.25, 25); 
+    transition: 0.3s ease background-color;
+}
+
+/* Stili për seksionin e navigimit në krye të faqes */
+#koka .navigimi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 15px;
+}
+
+/* Stili për listën e navigimit */
+#koka .nav-list ul {
+    list-style-type: none;
+    position: absolute;
+    background-color: rgb(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s ease left;
+}
+
+/* Stili për link-ët në listë */
+#koka .nav-list ul li a {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+/* Përcakton një efekt hover për pseudo-elementin after të elementit 
+anchor (a) brenda një elementi të listës (li) në një listë navigimi */
+#koka .nav-list ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: inherit;
+}
+
+/* Efekti i hover-it për tekstin në link */
+#koka .nav-list ul li:hover a {
+    color: crimson;
+}
+
+/* Efekti i aktivizimit në link kur janë të shtypur */
+#koka .nav-list ul li:active a {
+    color: crimson;
+}
+
+/* Stili për aktivizimin e link-ut kur është aktiv */
+#koka .nav-list ul.active {
+    color: red;
+    left: 0%;
+}
+
+/* Stili për tekstin në link kur është aktiv */
+#koka .nav-list ul .active a {
+    color: crimson;
+}
+
+/* Animacioni për zvogëlimin e shiritit të navigimit */
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+/* Animacioni për zvogëlimin e tekstit në 'hero' */
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+/* Animacioni për zvogëlimin e tekstit në emrin e faqes në 'hero' */
+@keyframes text_reveal_name {
+    100% {
+        color: crimson;
+        font-weight: 500;
+    }
+}
+
+/* Stili për seksionin 'hero' */
+#hero {
+    background-image: url(Untitled-2/HERO-BG1.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Stili për pasqyrën e seksionit 'hero' */
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Stili për elementin 'hero' në krye të faqes */
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+/* Stili për titullin 'h1' në seksionin 'hero' */
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 30px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+}
+
+/* Animacioni për zvogëlimin e tekstit në 'hero' */
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+/* Animacioni për zvogëlimin e tekstit në 'hero' */
+#hero h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+/* Animacioni për zvogëlimin e tekstit në emrin e faqes në 'hero' */
+#hero h1:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 3s;
+}
+
+/* Stili për pjesën e kuqe të tekstit në titullin e 'hero' */
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+}
+
+/* Animacioni për vonimin e zvogëlimit të pjesës së kuqe të tekstit në 'hero' */
+#hero h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+
+/* Animacioni për vonimin e zvogëlimit të pjesës së kuqe të tekstit në 'hero' */
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+/* Animacioni për vonimin e zvogëlimit të pjesës së kuqe të tekstit në emrin e faqes në 'hero' */
+#hero h1:nth-child(3) span {
+    animation-delay: 3.5s;
+}
+
+/* Stili për seksionin 'sherbimet' */
+#sherbimet .sherbimet {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+/* Stili për titullin e seksionit 'sherbimet' */
+#sherbimet .sherbimet-titulli {
+    font-size: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Stili për listën e sherbimeve në seksionin 'sherbimet' */
+#sherbimet .sherbimet-lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* Stili për një sherbim të caktuar në seksionin 'sherbimet' */
+#sherbimet .sherbimi-caktuar {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url();
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Stili për pasqyrën e një sherbimi të caktuar në seksionin 'sherbimet' */
+#sherbimet .sherbimi-caktuar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+/* Stili për ikonën e një sherbimi në listën e sherbimeve në seksionin 'sherbimet' */
+#sherbimet .sherbimet-lista .ikon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Stili për titullin e një sherbimi në seksionin 'sherbimet' */
+#sherbimet .sherbimi-caktuar h2 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Stili për përshkrimin e një sherbimi në seksionin 'sherbimet' */
+#sherbimet .sherbimi-caktuar p {
+    color: white;
+    text-align: left;
+}
+
+/* Stili për seksionin 'projektet' */
+#projektet .projektet {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+/* Stili për titullin e seksionit 'projektet' */
+#projektet .projektet-titulli h1 {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+/* Stili për të gjitha projektet në seksionin 'projektet' */
+#projektet .gjitha-projektet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Stili për një projekt në seksionin 'projektet' */
+#projektet .projekti {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Stile për seksionin e informacionit të projektit */
+#projektet .projekt-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.9;
+    color: white;
+}
+
+/* Stile për titullin në seksionin e informacionit të projektit */
+#projektet .projekt-info h1 {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+/* Stile për paragrafët në seksionin e informacionit të projektit */
+#projektet .projekt-info p {
+    color: white;
+}
+
+/* Stile për seksionin e fotografisë së projektit */
+#projektet .projekt-foto {
+    flex-basis: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Stile për mbulesën e seksionit të fotografisë së projektit */
+#projektet .projekt-foto::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.7;
+}
+
+/* Stile për seksionin 'fundi' */
+#fundi {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+/* Stile për titullin dhe paragrafët në seksionin 'fundi' */
+#fundi .permbajtja h2,
+#fundi .permbajtja p {
+    color: white;
+}
+
+/* Stile për konteinerin 'fundi' */
+#fundi .fundi {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Stile për ikonat e rrjeteve sociale */
+#fundi .rrjetet-sociale {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+/* Stile për ikonat individuale të rrjeteve sociale */
+#fundi .rrjeti {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+/* Stile për imazhet brenda ikonave të rrjeteve sociale */
+#fundi .rrjeti img {
+    filter: grayscale(1);
+    transition: 0.3s easy filter;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Stile për efektin hover të imazheve brenda ikonave të rrjeteve sociale */
+#fundi .rrjeti:hover img {
+    filter: grayscale(0);
+}
+
+/* Kornizat e çelësve për animacionin e zbulimit të tekstit */
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+/* Kornizat e çelësve për animacionin e zbulimit të tekstit */
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+/* Kornizat e çelësve për animacionin e zbulimit të tekstit */
+@keyframes text_reveal_name {
+    100% {
+        color: crimson;
+        font-weight: 500;
+    }
+}
+
+/* Media query për screen me një gjatësi minimale prej 750 pikselash */
+@media only screen and (min-width: 750px) {
+    /* Stile për butonat */
+    .btn {
+        font-size: 25px;
+        padding: 20px 60px;
+    }
+
+    /* Stile për titullin me klasën 'section-titulli' */
+    h1.section-titulli {
+        font-size: 37px;
+    }
+
+    /* Stile për titullin brenda seksionit 'hero' */
+    #hero h1 {
+        font-size: 30px;
+    }
+
+    /* Stile për seksionin 'sherbimet' */
+    #sherbimet .sherbimet-lista .sherbimi-caktuar {
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+
+    /* Stile për seksionin 'projektet' */
+    #projektet .projekti {
+        flex-direction: row;
+    }
+
+    /* Stile për elementet e alternuara 'projekti' në seksionin 'projektet' */
+    #projektet .projekti:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    /* Stile për elementet 'projekti' në seksionin 'projektet' */
+    #projektet .projekti {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Stile për elementet 'projekt-info' brenda 'gjitha-projektet' në seksionin 'projektet' */
+    #projektet .gjitha-projektet .projekt-info {
+        height: 100%;
+    }
+}
+
+/* Media query për ekrane me një gjatësi minimale prej 1200 pikselash */
+@media only screen and (min-width: 1200px) {
+    /* Stile për menunë hamburgjer */
+    #koka .hamburger {
+        display: none;
+    }
+
+    /* Stile për listën e navigimit brenda 'nav-list' në seksionin 'koka' */
+    #koka .nav-list ul {
+        position: inherit;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    /* Stile për elementet e individuale të listës brenda listës së navigimit */
+    #koka .nav-list ul li {
+        display: inline-block;
+    }
+
+    /* Stile për lidhjet brenda listës së navigimit */
+    #koka .nav-list ul li a {
+        font-size: 21px;
+    }
+
+    /* Stile për pseudo-elementet pas lidhjeve brenda listës së navigimit */
+    #koka .nav-list ul li a:after {
+        display: none;
+    }
+
+    /* Stile për seksionin 'sherbimet' për ekrane më të mëdha */
+    #sherbimet .sherbimet-lista .sherbimi-caktuar {
+        flex-basis: 25%;
+        margin: 1.5%;
+    }
+}
