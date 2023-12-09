@@ -1,0 +1,136 @@
+<!-- Deklarata fillestare e dokumentit HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Deklarata për karakteret e dokumentit -->
+    <meta charset="UTF-8">
+    <!-- Deklarata për shkallën e shfaqjes dhe ndryshueshmërinë e faqes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lidhja me stilin CSS për faqen Kontakti -->
+    <link rel="stylesheet" href="kontakti.css">
+</head>
+
+<body>
+    <!-- Seksioni i kryesimit të faqes -->
+    <section id="koka">
+        <div class="koka permbajtja">
+            <!-- Navigimi i faqes -->
+            <div class="navigimi">
+                <!-- Logoja e faqes -->
+                <div class="logo">
+                    <a href="#logo">
+                        <h1><span>Coding</span>Academy</h1>
+                    </a>
+                </div>
+                <!-- Lista e navigimit -->
+                <div class="nav-list">
+                    <!-- Hamburger menu për shfaqjen e listës në mode mobile -->
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <!-- Lidhjet e navigimit -->
+                        <li><a href="index.html">Ballina</a></li>
+                        <li><a href="sherbimi.html">Sherbimet</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>'
+                        <li><a href="login-forma.html">Kyçu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seksioni i kontaktit me informacionin dhe formën për abonim -->
+    <section id="kontakti">
+        <div class="kontakti permbajtja">
+            <!-- Titulli i seksionit të kontaktit -->
+            <div>
+                <h1 class="section-titulli">Kontakti</h1>
+            </div>
+            <!-- Kolonat për informacionin dhe formën për abonim -->
+            <div class="kolona-kontakti">
+                <!-- Elementet për kontaktin -->
+                <div class="elementet-kontakti">
+                    <div class="ikon"><img src="phone.png"></div>
+                    <div class="info-kontakti">
+                        <h1>Nr.Tel</h1>
+                        <h2>+383 44 111 222</h2>
+                        <h2>+383 49 111 222</h2>
+                    </div>
+                </div>
+
+                <div class="elementet-kontakti">
+                    <div class="ikon"><img src="email.png"></div>
+                    <div class="info-kontakti">
+                        <h1>Email</h1>
+                        <h2>info@gmail.com</h2>
+                        <h2>support@gmail.com</h2>
+                    </div>
+                </div>
+
+                <!-- Forma për abonim -->
+                <div class="elementet-kontakti">
+                    <div class="info-kontakti">
+                        <h1>Abonohu</h1>
+                        <form id="abonohuForm" style="font-size: 15px;">
+                            <!-- Fushat e formës për emër, mbiemër, gjini dhe zgjedhje të njoftimeve -->
+                            <label for="emri">Emri:</label><br>
+                            <input type="text" id="emri" name="emri" placeholder="p.sh filan"><br><br>
+
+                            <label for="mbiemri">Mbiemri:</label><br>
+                            <input type="text" id="mbiemri" name="mbiemri" placeholder="p.sh fisteku"><br><br>
+
+                            <label for="gjinia">Gjinia:</label>
+                            <label for="mashkull">M</label>
+                            <input type="radio" id="mashkull" name="gjinia" value="mashkull">
+
+                            <label for="femer">F</label>
+                            <input type="radio" id="femer" name="gjinia" value="femer"><br><br>
+
+                            <label for="njoftimet">Njoftimet:</label>
+                            <label for="lajme">Lajme</label>
+                            <input type="checkbox" id="lajme" name="njoftimet" value="lajme">
+
+                            <label for="oferta">Oferta</label>
+                            <input type="checkbox" id="oferta" name="njoftimet" value="oferta">
+
+                            <br><br>
+
+                            <!-- Butoni për dërgimin e formës -->
+                            <input type="submit" class="btn" style="color: black;" value="Dergo">
+                            <!-- Span për të shfaqur mesazhin e suksesit ose gabimit -->
+                            <span id="mesazhi"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skripta JavaScript për trajtimin e formës së abonimit -->
+    <script>
+        document.getElementById('abonohuForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Parandalon dërgimin e formës
+
+            // Merr vlerat e formës
+            var emri = document.getElementById('emri').value;
+            var mbiemri = document.getElementById('mbiemri').value;
+            var gjinia = document.querySelector('input[name="gjinia"]:checked');
+            var lajme = document.getElementById('lajme').checked;
+            var oferta = document.getElementById('oferta').checked;
+
+            // Kontrollo nqs të gjitha fushat e detyrueshme janë plotësuar
+            if (emri !== '' && mbiemri !== '' && gjinia !== null) {
+                // Shfaq mesazhin e suksesit
+                document.getElementById('mesazhi').innerText = 'Abonimi u krye me sukses';
+                document.getElementById('mesazhi').style.color = 'green';
+            } else {
+                // Shfaq mesazhin e gabimit ose trajto rastin kur fushat e detyrueshme nuk janë plotësuar
+                document.getElementById('mesazhi').innerText = 'Ju lutem plotësoni të gjitha fushat e detyrueshme.';
+                document.getElementById('mesazhi').style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
