@@ -1,0 +1,82 @@
+/* Stili për formën e trupit (body) */
+.body-form {
+    background-color: rgb(233, 233, 233); /* Ngjyra e sfondit */
+    font-family: sans-serif; /* Familja e fontit */
+    display: flex;
+    justify-content: center; /* Qendrimi në mes */
+    align-items: center; /* Ndalimi në mes */
+    min-height: 100vh; /* Lartësia minimale e ekranit */
+    color: aliceblue; /* Ngjyra e tekstit */
+}
+
+/* Stili për kapsulën (container) */
+.container {
+    background-color: #485563; /* Ngjyra e sfondit */
+    border-radius: 1.5em; /* Kthesa e këndit */
+    box-shadow: 10px 20px 25px rgb(246, 246, 246); /* Efekti i hijes */
+    overflow: hidden; /* Mos lejo tejkalim */
+    max-width: 100%; /* Gjatësia maksimale */
+}
+
+/* Stili për titullin */
+.titulli {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Familja e fontit */
+    padding: 20px 40px; /* Rellvizioni i mbushjes */
+}
+
+.titulli h2 {
+    text-align: center; /* Qendrimi i tekstit në mes */
+}
+
+/* Stili për formën */
+.form {
+    padding: 8px 50px; /* Rellvizioni i mbushjes */
+}
+
+/* Stili për kontrollin e formës */
+.form-control {
+    display: flex;
+    flex-direction: column; /* Drejtimi i kolonës */
+}
+
+.form-control input {
+    display: block;
+    border: 1px solid; /* Kufiri me një prerje */
+    padding: 10px 50px; /* Rellvizioni i mbushjes */
+    margin: 10px; /* Mbledhja nga rrethi */
+    display: block; /* Paraqitja e elementeve në formë blloku */
+    text-align: left; /* Pozicionimi i tekstit në të majtë */
+}
+
+/* Stili për butonin e dërgesës (submit) */
+#submit {
+    height: 40px;
+    width: 80px;
+}
+
+#submit.btn.btn-primary:hover {
+    transition: .5s; /* Tranzicioni në 0.5 sekonda */
+    color: white;
+    background: crimson; /* Ngjyra e sfondit në hover */
+    border-color: crimson; /* Ngjyra e kufirit në hover */
+}
+
+/* Stili për elementin radio */
+.radioElement input {
+    display: inline; /* Paraqitja e elementit në vijë */
+}
+
+/* Stili për elementin checkbox */
+.checkboxElement input {
+    display: inline; /* Paraqitja e elementit në vijë */
+}
+
+/* Stili për listën e selektuar e trajnimeve */
+.trajnimetSelectList {
+    display: block;
+    width: -webkit-fill-available; /* Plotësimi i hapësirës në dispozicion nga shfletuesi Webkit */
+    border: 1px solid; /* Kufiri me një prerje */
+    padding: 10px 50px; /* Rellvizioni i mbushjes */
+    margin: 10px; /* Mbledhja nga rrethi */
+    text-align: left; /* Përmbajtja e tekstit në të majtë */
+}
