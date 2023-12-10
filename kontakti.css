@@ -1,0 +1,318 @@
+/* Resetting default styles for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Setting base styles for the HTML element */
+html {
+    font-size: 15px;
+    font-family: Arial;
+    scroll-behavior: smooth;
+}
+
+/* Removing text decoration from anchor (link) elements */
+a {
+    text-decoration: none;
+}
+
+/* Styling the content section to be centered */
+.permbajtja {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Applying responsive styles to images */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling the main section title */
+.section-titulli {
+    font-size: 70spx; /* Note: Potential typo, consider correcting to '70px' */
+    font-weight: 300px; /* Note: Potential typo, consider correcting to '300' */
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Styling the span within the section title */
+.section-titulli span {
+    color: white;
+}
+
+/* Styling for a generic button */
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    transition: 0.3s easy;
+    transition-property: background-color, color;
+}
+
+/* Hover effect for the button */
+.btn:hover {
+    color: white;
+    background-color: crimson;
+}
+
+/* Styling for the logo's main heading */
+.logo h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Styling for the span within the logo's main heading */
+.logo h1 span {
+    color: crimson;
+}
+
+/******* Contact Section Styling *******/
+
+/* Styling for the contact section container */
+#kontakti .kontakti {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Styling for the contact section title */
+#kontakti .kontakti h1 {
+    font-size: 30px; /* Title enlargement */
+}
+
+/* Styling for the contact section column */
+#kontakti .kolona-kontakti {
+    width: 100%;
+}
+
+/* Styling for the contact section elements */
+#kontakti .elementet-kontakti {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 0;
+    transition: 0.3s ease box-shadow;
+}
+
+/* Hover effect for contact section elements */
+#kontakti .elementet-kontakti:hover {
+    box-shadow: 0px 0px 5px 0;
+    color: #485563;
+}
+
+/* Styling for contact section icons */
+#kontakti .ikon {
+    width: 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+/* Styling for the contact section icon title */
+#kontakti .ikon-kontakti h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+/* Styling for the contact section icon subtitle */
+#kontakti .ikon-kontakti h2 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+/* Styling for contact section button */
+#kontakti .btn {
+    font-size: 18px;
+    padding: 8px 14px;
+}
+
+/* Alternate styling for the contact section */
+#kontakti .kontakti {
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 20vh;
+}
+
+/* Styling for the contact section column in alternate mode */
+#kontakti .kolona-kontakti {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+/* Styling for the contact section elements in alternate mode */
+#kontakti .elemente-kontakti {
+    width: 30%;
+    margin: 0;
+    flex-direction: row;
+}
+
+/* Styling for the contact section icon in alternate mode */
+#kontakti .elementet-kontakti .ikon {
+    height: 70px;
+    width: 70px;
+}
+
+/* Styling for the contact section icon image in alternate mode */
+#kontakti .elementet-kontakti .ikon img {
+    object-fit: contain;
+}
+
+/* Styling for the contact section information in alternate mode */
+#kontakti .elementet-kontakti .info-kontakti {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Header Section Styling (KOKA) */
+
+/* Styling for the header section */
+#koka {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #485563;
+}
+
+/* Styling for the header section and transition for background color change */
+#koka .koka {
+    min-height: 10vh;
+    background-color: rgba(31, 30, 30, 0, 25);
+    transition: 0.3s ease background-color;
+}
+
+/* Styling for the navigation within the header */
+#koka .navigimi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 15px;
+}
+
+/* Styling for the navigation list within the header */
+#koka .nav-list ul {
+    list-style-type: none;
+    position: absolute;
+    background-color: rgb(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s ease left;
+}
+
+/* Styling for the active link in the navigation list */
+#koka .nav-list ul li:active a {
+    color: crimson;
+}
+
+/* Styling for the active state of the navigation list */
+#koka .nav-list ul.active {
+    color: red;
+    left: 0%;
+}
+
+/* Styling for the active link within the navigation list */
+#koka .nav-list ul .active a {
+    color: crimson;
+}
+
+/* Styling for the links within the navigation list */
+#koka .nav-list ul a {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+/* Hover effect for the links within the navigation list */
+#koka .nav-list ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: inherit;
+}
+
+/* Styling for link hover effect within the navigation list */
+#koka .nav-list ul li:hover a {
+    color: crimson;
+}
+
+/* Styling for desktop view (Media Query) */
+
+/* Media query for screens with a minimum width of 1200 pixels */
+@media only screen and (min-width: 1200px) {
+    /* Hiding the hamburger icon for larger screens */
+    #koka .hamburger {
+        display: none;
+    }
+
+    /* Adjusting the navigation list styles for larger screens */
+    #koka .nav-list ul {
+        position: inherit;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    /* Styling for list items within the navigation list for larger screens */
+    #koka .nav-list ul li {
+        display: inline-block;
+    }
+
+    /* Styling for links within the navigation list for larger screens */
+    #koka .nav-list ul li a {
+        font-size: 21px;
+    }
+
+    /* Hiding pseudo-elements after links within the navigation list for larger screens */
+    #koka .nav-list ul li a:after {
+        display: none;
+    }
+
+    /* Styling for the 'sherbimet' section for larger screens */
+    #sherbimet .sherbimet-lista .sherbimi-caktuar {
+        flex-basis: 25%;
+        margin: 1.5%;
+    }
+}
