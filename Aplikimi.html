@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta tags provide information about the document -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- The title of the webpage displayed in the browser tab -->
+    <title>Apliko per trajnim</title>
+
+    <!-- Linking an external stylesheet for styling -->
+    <link rel="stylesheet" href="FormularStyle.css">
+</head>
+<body class="body-form">
+
+    <!-- Container div holds the entire content of the page -->
+    <div class="container">
+
+        <!-- Div for the title of the form -->
+        <div class="titulli">
+            <h2>Aplikoni tani!</h2><br>
+            <h3>Plotësoni të dhënat</h3>
+        </div>
+
+        <!-- Form element with method "post" and action "procesi.php" -->
+        <form class="form" id="form" method="post">
+
+            <!-- Form controls for user input -->
+
+            <!-- Input for user's first name -->
+            <div class="form-control">
+                <label name="rsaPublicKey" keytype="RSA">Emri:</label>
+                <input type="text"  id="username" name="emri" required>
+
+                <!-- Input for user's last name -->
+                <label for="surname">Mbiemri: </label>
+                <input type="text"  id="surname" name="mbiemri" required>
+
+                <!-- Input for user's phone number with pattern validation -->
+                <label for="nrtel">Numri i telefonit: </label>
+                <input type="tel"  id="nrtel" name="numri_telefonit" pattern="04[3-9][0-9]{6}" required>
+
+                <!-- Input for user's email address with email validation -->
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Input for user's password -->
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required>
+
+                <!-- Input for user's age with a default value of 18 -->
+                <div class="moshaElement">
+                    <label>Mosha: </label>
+                    <input type="number" id="mosha" name="mosha" min="0" max="100" value="18">
+                </div>
+
+                <!-- Radio buttons for user's gender selection -->
+                <div class="radioElement">
+                    <label>Gjinia:  </label>
+                    <input type="radio" id="femer" name="gjinia" value="femer" required>
+                    <label for="femer">Femer</label>
+                    <input type="radio" id="mashkull" name="gjinia" value="mashkull" required>
+                    <label for="mashkull">Mashkull</label>
+                </div>
+                <br>
+
+                <!-- Dropdown list for selecting the training program -->
+                <label for="trajnimi">Zgjedheni trajnimin:</label>
+                <select name="trajnim" class="trajnimetSelectList" required>
+                    <option value="frontend">Front-end Development</option>
+                    <option value="backend">Back-end Development</option>
+                </select>
+
+                <!-- Dropdown list for selecting the training group -->
+                <label for="grupi">Zgjedheni grupin:</label>
+                <select name="grupi" class="trajnimetSelectList">
+                    <option value="Grupi 1">Grupi 1</option>
+                    <option value="Grupi 2">Grupi 2</option>
+                    <option value="Grupi 3">Grupi 3</option>
+                    <option value="Grupi 4">Grupi 4</option>
+                    <option value="Grupi 5">Grupi 5</option>
+                    <option value="Grupi 6">Grupi 6</option>
+                </select>
+
+                <!-- Checkbox for selecting the training mode -->
+                <div class="checkboxElement">
+                    <label>Si dëshironi të ndjekni kursin? </label><br>
+                    <label for="orari1">Fizikisht</label>
+                    <input type="checkbox" id="orari1" name="orari[]" value="Fizikisht" >
+                    <label for="orari2">Online</label>
+                    <input type="checkbox" id="orari2" name="orari[]" value="Online" >
+                </div>
+                <br>
+
+                <!-- Submit button for the form -->
+                <button id="submit" type="submit" class="btn btn-primary "  onclick="validateForm()">Aplikoni</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Including an external JavaScript file -->
+    <script src="script2.js"></script>
+</body>
+</html>
