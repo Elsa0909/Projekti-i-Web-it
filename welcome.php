@@ -16,7 +16,6 @@
             left: 16px;
             cursor: pointer;
         }
-
         table {
             border-collapse: collapse;
             width: 100%;
