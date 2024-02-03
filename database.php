@@ -12,7 +12,6 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["Email"];
     $password = $_POST["Password"];
-
     $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ? AND password = ?");
     $stmt->bind_param("ss", $email, $password);
 
